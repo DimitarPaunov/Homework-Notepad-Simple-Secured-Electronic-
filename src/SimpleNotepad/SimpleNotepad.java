@@ -92,7 +92,7 @@ public class SimpleNotepad implements INotepad {
 			}
 		}
 		
-		if(contains == false) {
+		if(!contains) {
 			System.out.println("No such page !");
 		}
 
