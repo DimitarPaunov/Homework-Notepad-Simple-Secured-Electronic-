@@ -44,7 +44,7 @@ public class Page {
 	}
 	boolean searchWord(String word) {
 		if(word != null) {
-			this.text = this.text.replaceAll("!?", "");
+			this.text = this.text.replaceAll("[.!?\\-]", "");
 			String [] textArr = this.text.split(" ");
 			for(int i = 0; i < textArr.length; i++) {
 				if(textArr[i].equals(word)) {
