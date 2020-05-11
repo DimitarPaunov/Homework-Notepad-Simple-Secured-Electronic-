@@ -60,12 +60,8 @@ public class SimpleNotepad implements INotepad {
 	public void searchWord(String word) {
 		
 		boolean hasWord = false;
-		System.out.println(this.pages.size());
 		
 		for(int i = 0; i < this.pages.size(); i++) {
-			if(this.pages.get(i).getText().isEmpty()) {
-				continue;
-			}
 			if(this.pages.get(i).searchWord(word) != false) {
 				hasWord = true;
 				break;
