@@ -34,14 +34,14 @@ public class SecuredNotepad extends SimpleNotepad {
 
 	@Override
 	public void addTextToPage(int pageNumber , String text) {
-		System.out.println("To add text to page you have to enter notepad's password");
+		System.out.println("To add text you have to enter notepad's password");
 		checkPass();
 		super.addTextToPage(pageNumber,text);	
 	}
 	
 	@Override
 	public void replaceTextInPage(int pageNumber, String text) {
-		System.out.println("To replace text to page you have to enter notepad's password");
+		System.out.println("To replace text you have to enter notepad's password");
 		checkPass();
 		super.replaceTextInPage(pageNumber,text);
 		
@@ -49,7 +49,7 @@ public class SecuredNotepad extends SimpleNotepad {
 
 	@Override
 	public void removeText(int pageNumber) {
-		System.out.println("To remove text to page you have to enter notepad's password");
+		System.out.println("To remove text have to enter notepad's password");
 		checkPass();
 		super.removeText(pageNumber);
 		
@@ -57,7 +57,7 @@ public class SecuredNotepad extends SimpleNotepad {
 
 	@Override
 	public void showAllPages() {
-		System.out.println("To show the text and the tile to page you have to enter notepad's password");
+		System.out.println("To show the text and the title have to enter notepad's password");
 		checkPass();
 		super.showAllPages();
 		
@@ -65,14 +65,14 @@ public class SecuredNotepad extends SimpleNotepad {
 	
 	@Override
 	public void searchWord(String word) {
-		System.out.println("To search word in the pages you have to enter notepad's password");
+		System.out.println("To search word you have to enter notepad's password");
 		checkPass();
 		super.searchWord(word);
 	}
 	
 	@Override
 	public void printAllPagesWithDigits() {
-		System.out.println("To printAllPagesWithDigits you have to enter notepad's password");
+		System.out.println("To print all pages with digits you have to enter notepad's password");
 		checkPass();
 		super.printAllPagesWithDigits();
 	}

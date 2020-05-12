@@ -3,6 +3,7 @@ package SimpleNotepad;
 public class ElectronicSecuredNotepad extends SecuredNotepad implements IElectronicDevice {
 
 	private boolean isStarted;
+	private String announce = "The device has stopped or it hasnt't started yet!";
 	
 	public ElectronicSecuredNotepad(int pages, String password) {
 		super(pages, password);
@@ -11,51 +12,63 @@ public class ElectronicSecuredNotepad extends SecuredNotepad implements IElectro
 
 	@Override
 	public void start() {
-		if(!isStarted) {
-			isStarted = true;
+		if(!this.isStarted) {
+			this.isStarted = true;
 		}
 		
 	}
 
 	@Override
 	public void addTextToPage(int pageNumber, String text) {
-		if(isStarted) {
-			super.addTextToPage(pageNumber, text);
+		if(!this.isStarted) {
+			System.out.println(this.announce);
+			return;
 		}
+		super.addTextToPage(pageNumber, text);
 	}
 
 	@Override
 	public void replaceTextInPage(int pageNumber, String text) {
-		if(isStarted) {
-			super.replaceTextInPage(pageNumber, text);
-		}	
+		if(!this.isStarted) {
+			System.out.println(this.announce);
+			return;
+		}
+		super.replaceTextInPage(pageNumber, text);
 	}
 
 	@Override
 	public void removeText(int pageNumber) {
-		if(isStarted) {
-			super.removeText(pageNumber);
+		if(!this.isStarted) {
+			System.out.println(this.announce);
+			return;
 		}
+		super.removeText(pageNumber);
 	}
 
 	@Override
 	public void showAllPages() {
-		if(isStarted) {
-			super.showAllPages();
+		if(!this.isStarted) {
+			System.out.println(this.announce);
+			return;
 		}
+		super.showAllPages();
 	}
 	@Override
 	public void searchWord(String word) {
-		if(isStarted) {
-			super.searchWord(word);
+		if(!this.isStarted) {
+			System.out.println(this.announce);
+			return;
 		}
+		super.searchWord(word);
 	}
 	
 	@Override
 	public void printAllPagesWithDigits() {
-		if(isStarted) {
-			super.printAllPagesWithDigits();
+		if(this.isStarted) {
+			System.out.println(this.announce);
+			return;
 		}
+		super.printAllPagesWithDigits();
 	}
 
 	@Override
