@@ -18,7 +18,7 @@ public class SimpleNotepad implements INotepad {
 	}
 	
 	protected boolean checkPage(int pageNumber) {
-		if(pageNumber > 0 && pageNumber < this.pages.size()){
+		if(pageNumber > 0 && pageNumber <= this.pages.size()){
 			return true;
 		}
 		System.out.println("Invalid number of page");
