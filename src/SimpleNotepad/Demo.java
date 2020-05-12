@@ -4,10 +4,18 @@ public class Demo {
 	
 	public static void main(String[] args) {
 		
-		SimpleNotepad s = new SimpleNotepad(5);
-		s.addTextToPage(1, "Real Madrid are the greatest ever beste!");
-		s.addTextToPage(2, "Lebron James is the goat!");
-		s.searchWord("goat");
+		ElectronicSecuredNotepad myDiary = new ElectronicSecuredNotepad(5,"Dimitar33");
+		myDiary.isStarted();
+		myDiary.start();
+		myDiary.addTextToPage(1, "Real Madrid is the best footbal club!");
+		myDiary.addTextToPage(2, "LA Lakers is the best basketball club!");
+		myDiary.addTextToPage(3, "LeBron James is one of the greatest athletes.");
+		myDiary.addTextToPage(4, "Basketball is the most interesting sport!");
+		myDiary.addTextToPage(5, "Football is the most popular sport in the world.");
+		myDiary.showAllPages();
+		myDiary.stop();
+		
+		
 		
 		
 		
