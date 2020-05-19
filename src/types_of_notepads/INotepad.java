@@ -1,4 +1,4 @@
-package SimpleNotepad;
+package types_of_notepads;
 
 public interface INotepad {
 	
