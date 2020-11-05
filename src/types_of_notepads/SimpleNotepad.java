@@ -22,7 +22,7 @@ public class SimpleNotepad implements INotepad {
 		
 	}
 	
-	protected boolean checkPage(int pageNumber) {
+	private boolean checkPage(int pageNumber) {
 		
 		if(pageNumber > 0 && pageNumber <= this.pages.size()){
 			return true;

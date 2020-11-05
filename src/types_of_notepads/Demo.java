@@ -10,6 +10,10 @@ public class Demo {
 		
 		myDiary.start();
 		
+		myDiary.stop();
+		
+		myDiary.start();
+		
 		myDiary.addTextToPage(1, "Real Madrid is the best footbal club!");
 		myDiary.addTextToPage(2, "LA Lakers is the best basketball club!");
 		myDiary.addTextToPage(3, "LeBron James is one of the greatest athletes.");

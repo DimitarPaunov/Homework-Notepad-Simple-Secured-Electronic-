@@ -17,7 +17,36 @@ public class ElectronicSecuredNotepad extends SecuredNotepad implements IElectro
 	public void start() {
 		
 		if(!this.isStarted) {
+			
 			this.isStarted = true;
+			System.out.println("The device has started !");
+		}
+		
+	}
+	
+	@Override
+	public void stop() {
+		
+		if(isStarted) {
+			
+			isStarted = false;
+			System.out.println("The device has stopped!");
+		}
+		
+	}
+	
+	@Override
+	public boolean isStarted() {
+		
+		if(isStarted) {
+			
+			System.out.println("The device is working right now");
+			return true;
+		}
+		else {
+			
+			System.out.println(this.announce);
+			return false;
 		}
 		
 	}
@@ -25,55 +54,45 @@ public class ElectronicSecuredNotepad extends SecuredNotepad implements IElectro
 	@Override
 	public void addTextToPage(int pageNumber, String text) {
 		
-		if(!this.isStarted) {
-			System.out.println(this.announce);
-			return;
+		if(this.isStarted) {
+			super.addTextToPage(pageNumber, text);
 		}
-		super.addTextToPage(pageNumber, text);
 		
 	}
 
 	@Override
 	public void replaceTextInPage(int pageNumber, String text) {
 		
-		if(!this.isStarted) {
-			System.out.println(this.announce);
-			return;
+		if(this.isStarted) {
+			super.replaceTextInPage(pageNumber, text);
 		}
-		super.replaceTextInPage(pageNumber, text);
-		
+			
 	}
 
 	@Override
 	public void removeText(int pageNumber) {
 		
-		if(!this.isStarted) {
-			System.out.println(this.announce);
-			return;
+		if(this.isStarted) {
+			super.removeText(pageNumber);
 		}
-		super.removeText(pageNumber);
 		
 	}
 
 	@Override
 	public void showAllPages() {
 		
-		if(!this.isStarted) {
-			System.out.println(this.announce);
-			return;
+		if(this.isStarted) {
+			super.showAllPages();
 		}
-		super.showAllPages();
 		
 	}
 	
 	@Override
 	public void searchWord(String word) {
 		
-		if(!this.isStarted) {
-			System.out.println(this.announce);
-			return;
+		if(this.isStarted) {
+			super.searchWord(word);
 		}
-		super.searchWord(word);
 		
 	}
 	
@@ -81,29 +100,9 @@ public class ElectronicSecuredNotepad extends SecuredNotepad implements IElectro
 	public void printAllPagesWithDigits() {
 		
 		if(this.isStarted) {
-			System.out.println(this.announce);
-			return;
-		}
-		super.printAllPagesWithDigits();
-		
-	}
-
-	@Override
-	public void stop() {
-		
-		if(isStarted) {
-			isStarted = false;
+			super.printAllPagesWithDigits();
 		}
 		
 	}
 
-	@Override
-	public boolean isStarted() {
-		
-		System.out.println(this.isStarted);
-		return this.isStarted;
-		
-	}
-
-	
 }

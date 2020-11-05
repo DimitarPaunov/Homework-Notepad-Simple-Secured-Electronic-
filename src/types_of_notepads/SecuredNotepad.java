@@ -11,6 +11,7 @@ public class SecuredNotepad extends SimpleNotepad {
 		
 		super(pages);
 		if(!securityCheck(password)) {
+			
 			throw new IllegalArgumentException("Invalid password.");
 		}
 		this.password = password;
