@@ -7,12 +7,12 @@ public class SecuredNotepad extends SimpleNotepad {
 	private String password;
 	
 	
-	public SecuredNotepad(int pages,String password) {
+	public SecuredNotepad(int pages,String password) throws InvalidPasswordException {
 		
 		super(pages);
 		if(!securityCheck(password)) {
 			
-			throw new IllegalArgumentException("Invalid password.");
+			throw new InvalidPasswordException();
 		}
 		this.password = password;
 		

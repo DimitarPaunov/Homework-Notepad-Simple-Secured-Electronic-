@@ -6,7 +6,7 @@ public class ElectronicSecuredNotepad extends SecuredNotepad implements IElectro
 	private String announce = "The device has stopped or it hasnt't started yet!";
 	
 	
-	public ElectronicSecuredNotepad(int pages, String password) {
+	public ElectronicSecuredNotepad(int pages, String password) throws InvalidPasswordException {
 		
 		super(pages, password);
 		this.isStarted = false;
